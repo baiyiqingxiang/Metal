@@ -15,6 +15,7 @@
 		2972D78627B795B90062FB1E /* Metal_02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972D78527B795B90062FB1E /* Metal_02UITests.swift */; };
 		2972D78827B795B90062FB1E /* Metal_02UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972D78727B795B90062FB1E /* Metal_02UITestsLaunchTests.swift */; };
 		2972D79527B796370062FB1E /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2972D79427B796370062FB1E /* MetalView.swift */; };
+		297DEA9227BA4C6700EC8BB9 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 297DEA9127BA4C6700EC8BB9 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2972D78527B795B90062FB1E /* Metal_02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal_02UITests.swift; sourceTree = "<group>"; };
 		2972D78727B795B90062FB1E /* Metal_02UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metal_02UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2972D79427B796370062FB1E /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		297DEA9127BA4C6700EC8BB9 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2972D76F27B795B90062FB1E /* Main.storyboard */,
 				2972D77227B795B90062FB1E /* Metal_02.entitlements */,
 				2972D79427B796370062FB1E /* MetalView.swift */,
+				297DEA9127BA4C6700EC8BB9 /* Shaders.metal */,
 			);
 			path = Metal_02;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297DEA9227BA4C6700EC8BB9 /* Shaders.metal in Sources */,
 				2972D79527B796370062FB1E /* MetalView.swift in Sources */,
 				2972D76C27B795B70062FB1E /* ViewController.swift in Sources */,
 				2972D76A27B795B70062FB1E /* AppDelegate.swift in Sources */,
