@@ -76,7 +76,10 @@ class MetalView : MTKView {
         {
             
             // colorAttaachments 是一组纹理  用于保存绘图结构并显示在屏幕上
-            rpd.colorAttachments[0].clearColor = MTLClearColor(red: 0, green: 0.5, blue: 0.5, alpha: 1)
+            rpd.colorAttachments[0].clearColor = MTLClearColor(red: 0,
+                                                               green: 0.5,
+                                                               blue: 0.5,
+                                                               alpha: 1)
             let commendBuffer = device!.makeCommandQueue()?.makeCommandBuffer()
             let encoder = commendBuffer!.makeRenderCommandEncoder(descriptor: rpd)
             // 顶点数据
@@ -85,7 +88,9 @@ class MetalView : MTKView {
                                          0.0,  1.0, 0.0, 1.0]
             let size = MemoryLayout.size(ofValue: vertex_data)
             let data_size = vertex_data.count * size
-            let vertex_buffer = device!.makeBuffer(bytes: vertex_data, length: data_size, options: [])
+            let vertex_buffer = device!.makeBuffer(bytes: vertex_data,
+                                                   length: data_size,
+                                                   options: [])
             
             let lib = device!.makeDefaultLibrary()
             let vertex_func = lib?.makeFunction(name: "vertex_func")
@@ -98,14 +103,18 @@ class MetalView : MTKView {
             let rps = try!device!.makeRenderPipelineState(descriptor: rpld)
 
             encoder?.setRenderPipelineState(rps)
-            encoder?.setVertexBuffer(vertex_buffer, offset: 0, index: 0)
-            encoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
+            encoder?.setVertexBuffer(vertex_buffer,
+                                     offset: 0,
+                                     index: 0)
+            encoder?.drawPrimitives(type: .triangle,
+                                    vertexStart: 0,
+                                    vertexCount: 3,
+                                    instanceCount: 1)
             
             encoder!.endEncoding()
             commendBuffer!.present(currentDrawable!)
             commendBuffer!.commit()
         }
     }
-    
 }
 
